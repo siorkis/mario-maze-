@@ -1,0 +1,203 @@
+
+	        switch (itemId){
+	        	case 'obstacle':
+	        		event.target.id = 'obstacle';
+	        		break;
+	        	case 'obstacle_1':
+	        		event.target.id = 'obstacle_1';
+	        		break;
+	        	case 'obstacle_2':
+	        		event.target.id = 'obstacle_2';
+	        		break;
+	        	case 'obstacle_3':
+	        		event.target.id = 'obstacle_3';
+	        		break;
+	        	case 'obstacle_4':
+	        		event.target.id = 'obstacle_4';
+	        		break;
+	        }
+
+
+
+			function save(){
+		let counter = 0;
+
+		let ind_bird = 0;
+		let ind_pig = 0;
+		let ind_obst = 0;
+		let ind_obst_1 = 0;
+		let ind_obst_2 = 0;
+		let ind_obst_3 = 0;
+		let ind_obst_4 = 0;
+
+		let list_coordinates = [[]];
+		let list_pig = [[]];
+		let list_obstacle = [[]];
+		let list_obstacle_1 = [[]];
+		let list_obstacle_2 = [[]];
+		let list_obstacle_3 = [[]];
+		let list_obstacle_4 = [[]];
+
+		let y = 8;
+		let x = 1;
+
+		let bird_coordinates = [];
+		let target_coordinates = [];
+		let obstacle_coordinates = [];
+		let obstacle1_coordinates = [];
+		let obstacle2_coordinates = [];
+		let obstacle3_coordinates = [];
+		let obstacle4_coordinates = [];
+
+		for (let i = 0; i < 64; i++){
+			if (x > 8){
+				x = 1;
+				y--;
+			}
+
+			try {
+				let c = a[i].children[0].id;
+				
+				switch (c){
+					case 'bird':
+						bird_coordinates = [x, y];
+						list_coordinates[ind_bird].push(bird_coordinates);
+						localStorage.setItem('list_coordinates', list_coordinates);
+						console.log(bird_coordinates, list_coordinates);
+						break;
+					case 'pig':
+						target_coordinates = [x, y];
+						list_pig[ind_pig].push(target_coordinates);
+						localStorage.setItem('list_pig', list_pig);
+						console.log(target_coordinates, list_pig);
+						break;
+					case 'obstacle':
+						obstacle_coordinates = [x, y];
+						list_obstacle[ind_obst].push(obstacle_coordinates);
+						localStorage.setItem('list_obstacle', list_obstacle);
+						console.log(obstacle_coordinates, list_obstacle);
+						break;
+					case 'obstacle_1':
+						obstacle1_coordinates = [x, y];
+						list_obstacle_1[ind_obst_1].push(obstacle1_coordinates);
+						localStorage.setItem('list_obstacle_1', list_obstacle_1);
+						console.log(obstacle1_coordinates, list_obstacle_1);
+						break;
+					case 'obstacle_2':
+						obstacle2_coordinates = [x, y];
+						list_obstacle_2[ind_obst_2].push(obstacle2_coordinates);
+						localStorage.setItem('list_obstacle_2', list_obstacle_2);
+						console.log(obstacle2_coordinates, list_obstacle_2);;
+						break;
+					case 'obstacle_3':
+						obstacle3_coordinates = [x, y];
+						list_obstacle_3[ind_obst_3].push(obstacle3_coordinates);
+						localStorage.setItem('list_obstacle_3', list_obstacle_3);
+						console.log(obstacle3_coordinates, list_obstacle_3);
+						break;
+					case 'obstacle_4':
+						obstacle4_coordinates = [x, y];
+						list_obstacle_4[ind_obst_4].push(obstacle4_coordinates);
+						localStorage.setItem('list_obstacle_4', list_obstacle_4);
+						console.log(obstacle4_coordinates, list_obstacle_4);
+						break;
+
+					ind_bird++;
+					ind_pig++;
+					ind_obst++;
+					ind_obst_1++;
+					ind_obst_2++;
+					ind_obst_3++;
+					ind_obst_4++;
+				}
+				//console.log(c + ' ' + x + ' ' + y);
+				
+			}
+
+			catch {
+
+			}
+			x++;
+		
+		}
+
+	for (let i = 0; i < 64; i++){
+		if (excel[i].id == 'bird' || excel[i].id == 'pig'){
+			counter++;
+			console.log(counter);
+		} 
+	}
+
+	// if(1 < counter && counter < 3){    /// 	DO NOT DELETE NEED TO SOLVE 
+
+	// } else {
+	// 	alert('Ooops, seems like need to place bird with pig on the table!');
+	// 	counter = 0;
+
+	// 	ind_bird = 0;
+	// 	ind_pig = 0;
+	// 	ind_obst = 0;
+	// 	ind_obst_1 = 0;
+	// 	ind_obst_2 = 0;
+	// 	ind_obst_3 = 0;
+	// 	ind_obst_4 = 0;
+
+	// 	list_coordinates = [[]];
+	// 	list_pig = [[]];
+	// 	list_obstacle = [[]];
+	// 	list_obstacle_1 = [[]];
+	// 	list_obstacle_2 = [[]];
+	// 	list_obstacle_3 = [[]];
+	// 	list_obstacle_4 = [[]];
+
+
+	// 	bird_coordinates = [];
+	// 	target_coordinates = [];
+	// 	obstacle_coordinates = [];
+	// 	obstacle1_coordinates = [];
+	// 	obstacle2_coordinates = [];
+	// 	obstacle3_coordinates = [];
+	// 	obstacle4_coordinates = [];	
+
+	// 	return;
+	// }
+
+	}
+            
+
+script.js 195 stroka
+// let coordinates = [4, 4];
+// let initial_coordinates = [4, 4];
+
+// let bird = [document.querySelector('[posX = "' + coordinates[0] +'"][posY = "' + coordinates[1] +'"]')];
+
+// let target;
+// let target_coordinates = [6, 6];
+// let target_initial_coordinates = [6, 6];
+
+
+// target.classList.add("pig");
+
+// let obstacle_1;
+// let obstacle_2;
+// let obstacle_3;
+// let obstacle_coordinates_1 = [6, 5];
+// let obstacle_coordinates_2 = [5, 6];
+// let obstacle_coordinates_3 = [7, 6];
+
+// obstacle_1 = document.querySelector('[posX = "' + obstacle_coordinates_1[0] +'"][posY = "' + obstacle_coordinates_1[1] +'"]');
+// obstacle_2 = document.querySelector('[posX = "' + obstacle_coordinates_2[0] +'"][posY = "' + obstacle_coordinates_2[1] +'"]');
+// obstacle_3 = document.querySelector('[posX = "' + obstacle_coordinates_3[0] +'"][posY = "' + obstacle_coordinates_3[1] +'"]');
+
+// obstacle_1.classList.add('obstcl');
+// obstacle_2.classList.add('obstcl');
+// obstacle_3.classList.add('obstcl');
+
+// bird[0].classList.add('bird_right');
+// console.log(bird);
+
+
+
+".htmlspecialchars($_SERVER['PHP_SELF'])."
+
+sort(); asort(); ksort(); rsort(); shuffle(); array_merge(); in_array()

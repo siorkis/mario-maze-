@@ -1,0 +1,457 @@
+* {
+	box-sizing: border-box;;
+}
+
+body {
+	margin: 0px;
+}
+
+input{
+	outline: none;
+}
+
+
+
+.excel{
+	width: 42px;
+	height: 42px;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+/* 
+Later remake 
+*/
+
+.obstcl{
+	background: url(media/images/obstacle_wood.png);
+	background-size: cover;
+}
+
+.bird_left{
+	background-image: url(media/images/mario_left.png);
+	background-size: cover;
+}
+
+.bird_right{
+	background-image: url(media/images/mario_right.png);
+	background-size: cover;
+}
+
+.bird_up{
+	background-image: url(media/images/mario_up.png);
+	background-size: cover;
+}
+
+.bird_down{
+	background-image: url(media/images/mario_down.png);
+	background-size: cover;
+}
+
+/* .snakeBody {
+	background-image: url(media/images/bird_left.png);
+	background-size: cover;
+	
+}
+*/
+
+.puf{
+	background-image:url('media/images/goal.gif');  
+	background-size: cover;
+}
+
+.pig{
+	background-image: url(media/images/bowser.png);
+	background-size: cover;
+}
+
+
+.pig_attack{
+    background-image: url(media/images/bowser_attack.png);
+    background-size: cover;
+}
+
+.pig_damaged{
+    background-image: url(media/images/bowser_damaged.png);
+    background-size: cover;
+}
+
+.btn-class{
+	border-radius: 15px;
+	border: 3px solid #1bb5a3;;
+	background-color: #1bb5a3;
+	color:white;
+	font-weight: bold;
+	padding:8px 12px;
+	outline:0;
+	cursor: pointer;
+}
+.btn-class:hover{
+	background-color: #26d7c3;
+	border: 3px solid #26d7c3;
+}
+.btn-class:active{
+	border: 3px solid #19a898;
+	background-color: #1bb5a3;
+}
+.divBut{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 150px;
+	height:300px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	margin-top: 70px;
+	
+}
+.save{
+	margin-top: 150px;
+}
+.listbut, .field, .divBut, .save {
+	float:left;
+	margin-left:50px;
+}
+.listbut{
+	margin-top: 70px;
+	margin-left: 10%;
+	background-color: rgb(240, 240, 240);
+	border: 1px solid rgb(230, 230, 230);
+	width: 700px;
+	min-height: 336px;
+	padding: 10px;
+}
+.listbut h2{
+	text-align: center;
+}
+
+#myButton{
+	margin-top: 20px;
+	width: 330px;
+	
+}
+
+
+	
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa !important;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  
+  border:none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.close:hover,
+.close:focus {
+    background-color: white !important;
+    color: black !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.drag_position{
+	position: absolute;
+	width: 42px;
+	height: 42px;
+	margin: -5px;
+}
+
+.arrow{
+	margin-right: -20px;
+}
+
+.link{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.link a{
+    text-decoration: none;
+    padding: 15px;
+}
+.clear{
+    clear:both;
+}
+
+
+/*LOGIN*/
+.login{
+    width:500px;
+    margin: 150px auto;
+    text-align: center;
+    border:1px solid white;
+    border-radius: 15px;
+    height: 320px;
+    background-color: white;
+}  
+.loginput{
+    border:none;
+    border-bottom: 2px solid #CCC;
+    color:#263238;
+    background-color: rgba(0, 0, 0, 0);
+    padding-bottom: 5px;
+    margin-top:10px;
+    margin-bottom: 15px;   
+    width:60%;
+    transition: border-bottom 0.25s;
+    
+}
+.loginput:focus{
+    border-bottom: 2px solid #1bb5a3;
+}
+#butlog{
+    cursor: pointer;
+}
+#butlog:hover{
+	border-bottom: 2px solid #1bb5a3;
+	transition: border-bottom 0.25s;
+}
+#registlink{
+    color:gray;
+   
+}
+#registlink:hover{
+    color: #212121;
+    text-decoration: none;
+}
+/*error*/
+.help-block{
+    font-size: 8pt;
+    color:red;
+}
+
+
+
+
+
+
+/*Registration*/
+.formReg{
+    width: 530px;
+    margin:auto;
+    margin-top: 100px;
+    padding: 45px;
+    border-radius: 7px;
+    background-color: white;
+
+}
+.txtInput{
+    border:none;
+    border-bottom: 2px solid #CCC;
+    color:#263238;
+    background-color: rgba(0, 0, 0, 0);
+    padding-bottom: 5px;
+    margin-top:10px;
+    margin-bottom: 15px;   
+    width:100%;
+    transition: border-bottom 0.25s;
+} 
+
+.txtInput:focus{
+    border-bottom: 2px solid #1bb5a3;
+}
+#registration{
+    color:gray;
+    font-size: 14px;
+}
+.buttons{
+    text-align: center;
+    border-radius: 4px;
+    width:100%;
+    height:30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+input[type="submit"]{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    margin: 4px 0;
+    cursor: pointer;
+    transition: all 0.25s;
+    color:#263238;
+}
+
+input[type="submit"]:hover{
+    background-color: #1bb5a3;
+    color:white;
+}
+input[type="reset"]{
+    background-color: rgba(0, 0, 0, 0);
+    color:#263238;
+    border: none;
+    border-bottom :1px solid #ccc;   
+}
+input[type="reset"]:hover{
+    border-bottom :1px solid #1bb5a3;
+}
+.radio input{
+    margin:15px 10px;
+}
+
+
+/*Header*/
+header{
+    width: 100%;
+    height: 50px;
+    display: block;
+    background-color: #1bb5a3;
+    background-image: url('images/logo.png') ;
+    background-repeat: no-repeat;
+    background-size: 160px 80px ;
+    background-position:80px 0px;
+    top:0;
+    position: fixed;
+    transition: top 0.3s;
+    z-index: 2;
+} 
+
+nav{
+    margin-top: 5px;
+    margin-right:50px;
+}
+header .righta{
+    float:right;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 17px;
+    color:white;
+	font-weight: bold;
+}
+/* header .lefta{
+    position: fixed;
+    left:80px;
+    top:20px;
+    width:160px;
+    color: rgba(0, 0, 0, 0);
+} */
+
+/*Stage generator*/
+.obst1{
+    background: url(media/images/mario_block_3.png);
+    background-size: cover;
+}
+
+.obst2{
+    background: url(media/images/mario_block_2.png);
+    background-size: cover;
+}
+
+.obst3{
+    background: url(media/images/mario_block_1.png);
+    background-size: cover;
+}
+
+.obst4{
+    background: url(media/images/mario_block_4.png);
+    background-size: cover;
+}
+
+.obst{
+
+}
+
+
+/*account*/
+.levels{
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    width:70%;  
+    
+}
+
+.levels_1{
+    display: flex;
+    justify-content: space-around;
+    width:30%;  
+    
+}
+
+.levelBlock{
+     width:336px;
+    height: 366px;
+    margin: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.25s;
+    color:#263238;
+}
+.levelBlock:hover{
+    background-color: #1bb5a3;
+   
+}
+.levelBlock:hover a{
+    color: white;
+}
+
+
+/* .levelBlock input{
+    width:286px;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+} */
+
+ .levelBlock button, .levelBlock_1 button {
+    width:30px;
+    height: 30px; 
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+ }
+
+#hst{
+    margin-top: 70px;
+    text-align: center;
+}
+.nameinput{
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    
+}
+.nameinput:focus{
+    border: 1px solid #1bb5a3;
+}
+.field {
+	width: 336px;
+	height: 336px;
+	margin-top: 70px;
+	margin-left: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	background-image: url(media/images/mario_background_8.1.png);
+	
+}
